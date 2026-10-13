@@ -29,6 +29,7 @@ def load_urls(argv):
 
 
 def main(argv):
+    print("run:", datetime.now(timezone.utc).isoformat(), flush=True)
     client = TavilyClient()
     result = client.extract(urls=load_urls(argv), extract_depth="basic")
     now = datetime.now(timezone.utc)
